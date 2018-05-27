@@ -18,12 +18,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var person3: UIView!
     @IBOutlet weak var person4: UIView!
     
-    
-    
-    
     var centerOfCard:CGPoint!
     var people = [UIView]()
     var selectedCardCount: Int = 0
+    
+    let name = ["ほのか","あかね", "みほ", "おっちゃん"]
+    var likedName = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,12 +73,24 @@ class ViewController: UIViewController {
                     self.resetCard()
                     self.people[self.selectedCardCount].center = CGPoint(x: self.people[self.selectedCardCount].center.x - 250, y: self.people[self.selectedCardCount].center.y)
                 })
+                likeImageView.alpha = 0
+                selectedCardCount += 1
+                if selectedCardCount >= people.count{
+                    print(likedName)
+                }
                 return
+            //右に大きくスワイプ
             }else if card.center.x > self.view.frame.width - 75 {
                 UIView.animate(withDuration: 0.2, animations: {
                     self.resetCard()
                     self.people[self.selectedCardCount].center = CGPoint(x: self.people[self.selectedCardCount].center.x, y: self.people[self.selectedCardCount].center.y - 250)
                 })
+                likeImageView.alpha = 0
+                likedName.append(name[selectedCardCount])
+                selectedCardCount += 1
+                if selectedCardCount >= people.count{
+                    print(likedName)
+                }
                 return
             }
             
