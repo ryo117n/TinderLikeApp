@@ -14,6 +14,7 @@
 		4A0B71B720BA88D4000BA2A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A0B71B520BA88D4000BA2A9 /* LaunchScreen.storyboard */; };
 		4A0B71C220BA88D4000BA2A9 /* TinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0B71C120BA88D4000BA2A9 /* TinderUITests.swift */; };
 		4A0B71CD20BA88D4000BA2A9 /* TinderUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0B71CC20BA88D4000BA2A9 /* TinderUIUITests.swift */; };
+		4AB4905220BB151300445942 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB4905120BB151300445942 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		4A0B71C820BA88D4000BA2A9 /* TinderUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TinderUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A0B71CC20BA88D4000BA2A9 /* TinderUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderUIUITests.swift; sourceTree = "<group>"; };
 		4A0B71CE20BA88D4000BA2A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AB4905120BB151300445942 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				4A0B71AE20BA88D4000BA2A9 /* ViewController.swift */,
 				4A0B71B020BA88D4000BA2A9 /* Main.storyboard */,
 				4A0B71B320BA88D4000BA2A9 /* Assets.xcassets */,
+				4AB4905120BB151300445942 /* ListViewController.swift */,
 				4A0B71B520BA88D4000BA2A9 /* LaunchScreen.storyboard */,
 				4A0B71B820BA88D4000BA2A9 /* Info.plist */,
 			);
@@ -261,6 +264,7 @@
 			files = (
 				4A0B71AF20BA88D4000BA2A9 /* ViewController.swift in Sources */,
 				4A0B71AD20BA88D4000BA2A9 /* AppDelegate.swift in Sources */,
+				4AB4905220BB151300445942 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
