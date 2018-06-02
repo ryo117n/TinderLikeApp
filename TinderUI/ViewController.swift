@@ -51,6 +51,34 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func likebuttonTapped(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.resetCard()
+            self.people[self.selectedCardCount].center = CGPoint(x: self.people[self.selectedCardCount].center.x + 500, y: self.people[self.selectedCardCount].center.y)
+        })
+        likeImageView.alpha = 0
+        likedName.append(name[selectedCardCount])
+        selectedCardCount += 1
+        if selectedCardCount >= people.count{
+            performSegue(withIdentifier: "PushList", sender: self)
+        }
+        return
+    }
+    
+    @IBAction func dislikebuttonTapped(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.resetCard()
+            self.people[self.selectedCardCount].center = CGPoint(x: self.people[self.selectedCardCount].center.x - 500, y: self.people[self.selectedCardCount].center.y)
+        })
+        likeImageView.alpha = 0
+        selectedCardCount += 1
+        if selectedCardCount >= people.count{
+            performSegue(withIdentifier: "PushList", sender: self)
+        }
+        return
+    }
+    
+    
     @IBAction func swipeCard(_ sender: UIPanGestureRecognizer) {
         let card = sender.view!
         let point =  sender.translation(in:  view)
@@ -78,7 +106,7 @@ class ViewController: UIViewController {
             if card.center.x < 75{
                 UIView.animate(withDuration: 0.2, animations: {
                     self.resetCard()
-                    self.people[self.selectedCardCount].center = CGPoint(x: self.people[self.selectedCardCount].center.x - 250, y: self.people[self.selectedCardCount].center.y)
+                    self.people[self.selectedCardCount].center = CGPoint(x: self.people[self.selectedCardCount].center.x - 500, y: self.people[self.selectedCardCount].center.y)
                 })
                 likeImageView.alpha = 0
                 selectedCardCount += 1
@@ -90,7 +118,7 @@ class ViewController: UIViewController {
             }else if card.center.x > self.view.frame.width - 75 {
                 UIView.animate(withDuration: 0.2, animations: {
                     self.resetCard()
-                    self.people[self.selectedCardCount].center = CGPoint(x: self.people[self.selectedCardCount].center.x, y: self.people[self.selectedCardCount].center.y - 250)
+                    self.people[self.selectedCardCount].center = CGPoint(x: self.people[self.selectedCardCount].center.x + 500, y: self.people[self.selectedCardCount].center.y)
                 })
                 likeImageView.alpha = 0
                 likedName.append(name[selectedCardCount])
